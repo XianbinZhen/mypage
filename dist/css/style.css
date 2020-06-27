@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  padding-bottom: 0.4rem;
+}
+
+a:hover {
+  border-bottom: 2px solid #58a5f0;
+}
+
+.container {
+  margin: auto;
+  background: #004c8c;
+  color: white;
+}
+
+#header .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #003059;
+}
+
+#header .header .logo {
+  width: 60px;
+  margin: 1rem 2rem;
+}
+
+#header .header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 2rem;
+}
+
+#header .header .menu li {
+  margin: 0 1rem;
+  list-style-type: none;
+}
+
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 500px;
+  width: 90%;
+  margin: auto;
+  background-color: #003e73;
+  background-image: url("../imgs/intro1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.intro #left-btn {
+  font-size: 2rem;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.intro #left-btn:hover {
+  -webkit-transform: translateX(-0.4rem);
+          transform: translateX(-0.4rem);
+}
+
+.intro .introduction {
+  text-align: center;
+}
+
+.intro .introduction h1 {
+  font-size: 3rem;
+  margin-top: 3rem;
+}
+
+.intro .introduction p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.intro .introduction a {
+  margin-top: 1rem;
+}
+
+.intro .introduction a i {
+  margin-left: 0.4rem;
+}
+
+.intro #right-btn {
+  font-size: 2rem;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.intro #right-btn:hover {
+  -webkit-transform: translateX(0.4rem);
+          transform: translateX(0.4rem);
+}

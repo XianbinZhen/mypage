@@ -1,0 +1,81 @@
+// config variables
+$color-primary: #0277bd;
+$color-primary-light: #58a5f0;
+$color-primary-dark: #004c8c;
+$color-secondary: #64b5f6;
+$color-secondary-light: #9be7ff;
+$color-secondary-dark: #2286c3;
+@import 'config';
+@import 'util';
+
+#header {
+	.header {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		background-color: darken($color-primary-dark, 10);
+
+		.logo {
+			width: 60px;
+			margin: 1rem 2rem;
+		}
+
+		.menu {
+			display: flex;
+			align-items: center;
+			padding-right: 2rem;
+
+			li {
+				margin: 0 1rem;
+				list-style-type: none;
+			}
+		}
+	}
+}
+
+.intro {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 500px;
+	width: 90%;
+	margin: auto;
+	background-color: darken($color-primary-dark, 5);
+	background-image: url("../imgs/intro1.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	#left-btn {
+		font-size: 2rem;
+		transition: all 400ms;
+	}
+	#left-btn:hover {
+		transform: translateX(-0.4rem);
+	}
+
+	.introduction {
+		text-align: center;
+		h1 {
+			font-size: 3rem;
+			margin-top: 3rem;
+		}
+		p {
+			font-size: 1.5rem;
+			margin-top: 1rem;
+		}
+		a {
+			margin-top: 1rem;
+			i {
+				margin-left: 0.4rem;
+			}
+		}
+	}
+
+	#right-btn {
+		font-size: 2rem;
+		transition: all 400ms;
+	}
+
+	#right-btn:hover {
+		transform: translateX(0.4rem);
+	}
+}
