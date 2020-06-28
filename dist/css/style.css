@@ -198,6 +198,7 @@ a:hover {
   color: yellow;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(6%, white), color-stop(6%, black), color-stop(93%, black), color-stop(93%, white));
   background: linear-gradient(white 6%, black 6%, black 93%, white 93%);
+  text-shadow: 1px 0px;
 }
 
 #skills .skill #bootstrap {
@@ -208,8 +209,8 @@ a:hover {
   color: #61dbfb;
 }
 
-#skills .skill #linux {
-  color: black;
+#skills .skill #sass {
+  color: #c69;
 }
 
 #skills .skill:hover h5 {
