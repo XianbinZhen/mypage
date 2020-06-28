@@ -1,3 +1,11 @@
+// config variables
+$color-primary: #0277bd;
+$color-primary-light: #58a5f0;
+$color-primary-dark: #004c8c;
+$color-secondary: #64b5f6;
+$color-secondary-light: #9be7ff;
+$color-secondary-dark: #2286c3;
+
 * {
 	margin: 0;
 	padding: 0;
@@ -9,12 +17,18 @@ img {
 }
 
 a {
+	text-align: center;
+	padding: 5px 10px;
 	text-decoration: none;
 	display: inline-block;
 	color: white;
 	padding-bottom: 0.4rem;
+	transition: all 200ms ease-in-out;
+	min-height: 35px;
+	justify-self: start;
 }
 
 a:hover {
-	border-bottom: 2px solid $color-primary-light;
+	color: $color-secondary-light;
+	border-bottom: $color-secondary-light solid 2px;
 }
