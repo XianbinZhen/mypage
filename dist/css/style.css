@@ -26,6 +26,7 @@ a {
 a:hover {
   color: #9be7ff;
   border-bottom: #9be7ff solid 2px;
+  cursor: pointer;
 }
 
 .container {
@@ -38,6 +39,18 @@ a:hover {
 .br {
   width: 100%;
   height: 2px;
+  background-color: #58a5f0;
+}
+
+.btn-primary {
+  padding: 0.3rem 1.6rem;
+  border-radius: 0.2rem;
+  border: none;
+  background-color: #0277bd;
+  color: white;
+}
+
+.btn-primary:hover {
   background-color: #58a5f0;
 }
 
@@ -95,6 +108,7 @@ a:hover {
   -webkit-transform: translateX(-0.2rem);
           transform: translateX(-0.2rem);
   color: #9be7ff;
+  cursor: pointer;
 }
 
 .intro #right-btn {
@@ -111,6 +125,25 @@ a:hover {
   -webkit-transform: translateX(0.2rem);
           transform: translateX(0.2rem);
   color: #9be7ff;
+  cursor: pointer;
+}
+
+@-webkit-keyframes showbg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showbg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .intro .introduction {
@@ -122,6 +155,10 @@ a:hover {
   opacity: 0;
   -webkit-transition: all 800ms ease-in-out;
   transition: all 800ms ease-in-out;
+  -webkit-animation-name: showbg;
+          animation-name: showbg;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
 }
 
 .intro .introduction::after {
@@ -345,6 +382,66 @@ footer {
   font-size: 1.2rem;
   text-align: center;
   background-color: #01578b !important;
+}
+
+#modal-skill {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+#modal-skill .modal-skill {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  background-color: white;
+  color: #004c8c;
+  border-radius: 0.4rem;
+  margin: 150px auto;
+}
+
+#modal-skill .modal-skill > i {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+#modal-skill .modal-skill .modal-top {
+  height: 200px;
+  text-align: center;
+  padding-top: 4rem;
+}
+
+#modal-skill .modal-skill .modal-top > h5 {
+  font-size: 2rem;
+}
+
+#modal-skill .modal-skill .modal-bottom {
+  background-color: #f2f2f3;
+  height: 300px;
+  border-radius: 0.4rem;
+}
+
+#modal-skill .modal-skill .modal-bottom > button {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#modal-skill .modal-skill .modal-bottom p {
+  font-size: 1.2rem;
+  padding: 2rem;
+}
+
+.show-modal {
+  display: block !important;
 }
 
 @media (min-width: 1200px) {
