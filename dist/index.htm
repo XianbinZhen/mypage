@@ -46,8 +46,8 @@
         </div>
     </section>
     <!--skills-->
+    <h1 id="skill-title" class="container">My <strong class="strong-reverse">skill</strong></h1>
     <section id="skills" class="container">
-        <h1>My skill</h1>
         <div class="skill">
             <i class="fab fa-html5" id="html5"></i>
             <h5>HTML</h5>
@@ -76,7 +76,7 @@
 
     <!--projects-->
     <section id="projects" class="container">
-        <h1>My projects</h1>
+        <h1>My <strong>projects</strong></h1>
         <div class="projects">
             <div class="projects-content">
                 <div class="projects-img">
@@ -123,30 +123,37 @@
                     <a href="" class="btn">Learn more <i class="fas fa-angle-right"></i></a>
                 </div>
             </div>
-
-
-
-
         </div>
     </section>
+
+
 
     <!--modal-->
     <div id="modal-skill">
         <div class="modal-skill">
-            <i class="fas fa-times 2x" id="close-btn-top"></i>
+            <i class="fas fa-times fa-2x" id="close-btn-top"></i>
             <div class="modal-top">
-                <i class="fab fa-html5 fa-5x"></i>
-                <h5>HTML</h5>
+                <i class="fab fa-html5 fa-5x" id="modal-icon"></i>
+                <h5 id="modal-h5">place holder</h5>
             </div>
             <div class="modal-bottom">
-                <p>I know html and stuff.</p>
+                <p id="modal-bottom-p">place holder</p>
                 <button class="btn-primary" id="close-btn-bottom">Close</button>
             </div>
         </div>
     </div>
 
     <!--footer-->
-    <footer class="container">&copy; Xianbin Zhen 2020</footer>
+    <footer class="container" id="footer">
+        <p>&copy; Xianbin Zhen 2020</p>
+        <div class="contact">
+            <a href=""><i class="fas fa-envelope"></i></a>
+            <a href=""><i class="fab fa-linkedin "></i></a>
+            <a href=""><i class="fas fa-home "></i></a>
+            <a href=""><i class="fab fa-youtube "></i></a>
+            <a href=""><i class="fab fa-facebook "></i></a>
+        </div>
+    </footer>
     <script src="js/main.js"></script>
 
 </body>

@@ -1,8 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
 img {
@@ -29,29 +34,19 @@ a:hover {
   cursor: pointer;
 }
 
-.container {
-  margin: auto;
-  background: #004c8c;
+button:focus {
+  outline: none;
+}
+
+strong {
+  text-transform: uppercase;
   color: white;
-  width: 95%;
+  text-shadow: 2px 2px #58a5f0;
 }
 
-.br {
-  width: 100%;
-  height: 2px;
-  background-color: #58a5f0;
-}
-
-.btn-primary {
-  padding: 0.3rem 1.6rem;
-  border-radius: 0.2rem;
-  border: none;
-  background-color: #0277bd;
-  color: white;
-}
-
-.btn-primary:hover {
-  background-color: #58a5f0;
+.strong-reverse {
+  color: #004c8c;
+  text-shadow: 2px 2px #9be7ff;
 }
 
 #header .header {
@@ -90,7 +85,7 @@ a:hover {
 .intro {
   height: 500px;
   margin: auto;
-  background-color: #003e73;
+  background-color: black;
   position: relative;
 }
 
@@ -212,6 +207,13 @@ a:hover {
   background: url("../imgs/intro3.jpg") no-repeat center top/cover;
 }
 
+#skill-title {
+  padding-top: 1.2rem;
+  padding-left: 3rem;
+  background-color: white;
+  color: #004c8c;
+}
+
 #skills {
   display: -ms-grid;
   display: grid;
@@ -224,75 +226,70 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  margin-top: 1rem;
   gap: 0.2rem;
   background-color: white;
   color: #004c8c;
+  border-bottom-left-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
 }
 
-#skills h1 {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 6;
-  grid-column: 1/7;
-  font-size: 2rem;
-  text-align: start;
-  padding: 1rem;
-}
-
-#skills .skill {
+.skill {
   cursor: pointer;
 }
 
-#skills .skill i {
+.skill i {
   font-size: 4rem;
   margin-top: 1rem;
 }
 
-#skills .skill h5 {
+.skill h5 {
   font-size: 1.2rem;
   margin: 1rem 0;
   -webkit-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out;
-  min-height: 50px;
+  min-height: 38px;
 }
 
-#skills .skill #html5 {
+.skill #html5 {
   background: -webkit-gradient(linear, left top, right top, color-stop(50%, #e34c26), color-stop(50%, #f06529));
   background: linear-gradient(to right, #e34c26 50%, #f06529 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-#skills .skill #css3 {
+.skill #css3 {
   background: -webkit-gradient(linear, left top, right top, color-stop(50%, #264de4), color-stop(50%, #2965f1));
   background: linear-gradient(to right, #264de4 50%, #2965f1 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-#skills .skill #js {
+.skill #js {
   color: #cccc00;
 }
 
-#skills .skill #bootstrap {
+.skill #bootstrap {
   color: #563d7c;
 }
 
-#skills .skill #react {
+.skill #react {
   color: #61dbfb;
 }
 
-#skills .skill #sass {
+.skill #sass {
   color: #c69;
 }
 
-#skills .skill:hover h5 {
-  font-size: 2rem;
+.skill:hover h5 {
+  font-size: 1.8rem;
 }
 
 #projects h1 {
-  margin: 1.4rem;
+  margin-top: 1.4rem;
+  border-radius: 0.4rem;
   font-size: 2rem;
+  background-color: #0277bd;
+  padding: 1rem 3rem;
 }
 
 .projects-content {
@@ -377,11 +374,27 @@ a:hover {
           align-items: center;
 }
 
-footer {
-  padding: 1rem;
-  font-size: 1.2rem;
+#footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   background-color: #01578b !important;
+  padding: 0.4rem 2rem;
+  border-radius: 0.4rem;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+#footer .contact a {
+  border: none;
+  min-height: 10px;
 }
 
 #modal-skill {
@@ -393,6 +406,28 @@ footer {
   z-index: 3;
   background-color: rgba(0, 0, 0, 0.6);
   display: none;
+  -webkit-animation-name: show-modal-animation;
+          animation-name: show-modal-animation;
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
+}
+
+@-webkit-keyframes show-modal-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show-modal-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #modal-skill .modal-skill {
@@ -405,6 +440,10 @@ footer {
   margin: 150px auto;
 }
 
+#modal-skill .modal-skill #close-btn-top:hover {
+  opacity: .8;
+}
+
 #modal-skill .modal-skill > i {
   position: absolute;
   right: 1rem;
@@ -415,6 +454,37 @@ footer {
   height: 200px;
   text-align: center;
   padding-top: 4rem;
+  -webkit-animation-name: modal-top-move-in;
+          animation-name: modal-top-move-in;
+  -webkit-animation-duration: 600ms;
+          animation-duration: 600ms;
+  -moz-animation-timing-function: ease-out;
+}
+
+@-webkit-keyframes modal-top-move-in {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
+@keyframes modal-top-move-in {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 100%;
+  }
 }
 
 #modal-skill .modal-skill .modal-top > h5 {
@@ -444,8 +514,61 @@ footer {
   display: block !important;
 }
 
+.container {
+  margin: auto;
+  background: #004c8c;
+  color: white;
+  width: 95%;
+}
+
+.br {
+  width: 100%;
+  height: 2px;
+  background-color: #58a5f0;
+}
+
+.btn-primary {
+  padding: 0.3rem 1.6rem;
+  border-radius: 0.2rem;
+  border: none;
+  background-color: #0277bd;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #58a5f0;
+}
+
 @media (min-width: 1200px) {
   .container {
     width: 1080px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  #skill-title {
+    width: 98%;
+  }
+  #skills {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    width: 98%;
+  }
+  .projects-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects-content .projects-img {
+    width: 98%;
+  }
+  .projects-content .content-detail {
+    display: none;
   }
 }

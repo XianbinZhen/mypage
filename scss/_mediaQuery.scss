@@ -1,0 +1,34 @@
+// media query
+@media (min-width: 1200px) {
+	.container {
+		width: 1080px;
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		width: 100%;
+	}
+
+	#skill-title {
+		width: 98%;
+	}
+	#skills {
+		grid-template-columns: repeat(3, 1fr);
+		border-bottom-left-radius: 0.8rem;
+		border-bottom-right-radius: 0.8rem;
+		width: 98%;
+	}
+
+	.projects {
+		&-content {
+			flex-direction: column;
+			.projects-img {
+				width: 98%;
+			}
+			.content-detail {
+				display: none;
+			}
+		}
+	}
+}

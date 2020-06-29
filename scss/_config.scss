@@ -11,6 +11,9 @@ $color-secondary-dark: #2286c3;
 	padding: 0;
 	box-sizing: border-box;
 }
+body {
+	font-family: 'Roboto', sans-serif;
+}
 
 img {
 	width: 100%;
@@ -32,4 +35,18 @@ a:hover {
 	color: $color-secondary-light;
 	border-bottom: $color-secondary-light solid 2px;
 	cursor: pointer;
+}
+
+button:focus {
+	outline: none;
+}
+
+strong {
+	text-transform: uppercase;
+	color: white;
+	text-shadow: 2px 2px $color-primary-light;
+}
+.strong-reverse {
+	color: $color-primary-dark;
+	text-shadow: 2px 2px $color-secondary-light;
 }

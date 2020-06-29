@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 @import 'config';
-@import 'util';
 
 #header {
 	.header {
@@ -29,7 +30,7 @@
 .intro {
 	height: 500px;
 	margin: auto;
-	background-color: darken($color-primary-dark, 5);
+	background-color: black;
 	position: relative;
 
 	#left-btn {
@@ -130,72 +131,76 @@
 	}
 }
 
+#skill-title {
+	padding-top: 1.2rem;
+	padding-left: 3rem;
+	background-color: white;
+	color: $color-primary-dark;
+}
 #skills {
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	margin-top: 1rem;
 	gap: 0.2rem;
 	background-color: white;
 	color: $color-primary-dark;
-	h1 {
-		grid-column: 1/7;
-		font-size: 2rem;
-		text-align: start;
-		padding: 1rem;
+	border-bottom-left-radius: 0.4rem;
+	border-bottom-right-radius: 0.4rem;
+}
+
+.skill {
+	cursor: pointer;
+
+	i {
+		font-size: 4rem;
+		margin-top: 1rem;
 	}
 
-	.skill {
-		cursor: pointer;
-
-		i {
-			font-size: 4rem;
-			margin-top: 1rem;
-		}
-
-		h5 {
-			font-size: 1.2rem;
-			margin: 1rem 0;
-			transition: all 100ms ease-in-out;
-			min-height: 50px;
-		}
-		#html5 {
-			background: linear-gradient(to right, #e34c26 50%, #f06529 50%);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-		}
-		#css3 {
-			background: linear-gradient(to right, #264de4 50%, #2965f1 50%);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-		}
-		#js {
-			color: darken(yellow, 10);
-			// background: linear-gradient(white 6%, black 6%, black 93%, white 93%);
-			// text-shadow: 1px 0px;
-		}
-		#bootstrap {
-			color: #563d7c;
-		}
-		#react {
-			color: #61dbfb;
-		}
-		#sass {
-			color: #c69;
-		}
+	h5 {
+		font-size: 1.2rem;
+		margin: 1rem 0;
+		transition: all 100ms ease-in-out;
+		min-height: 38px;
 	}
-
-	.skill:hover h5 {
-		font-size: 2rem;
+	#html5 {
+		background: linear-gradient(to right, #e34c26 50%, #f06529 50%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
 	}
+	#css3 {
+		background: linear-gradient(to right, #264de4 50%, #2965f1 50%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	#js {
+		color: darken(yellow, 10);
+		// background: linear-gradient(white 6%, black 6%, black 93%, white 93%);
+		// text-shadow: 1px 0px;
+	}
+	#bootstrap {
+		color: #563d7c;
+	}
+	#react {
+		color: #61dbfb;
+	}
+	#sass {
+		color: #c69;
+	}
+}
+
+.skill:hover h5 {
+	font-size: 1.8rem;
 }
 
 #projects {
 	h1 {
-		margin: 1.4rem;
+		margin-top: 1.4rem;
+		border-radius: 0.4rem;
 		font-size: 2rem;
+		background-color: $color-primary;
+		padding: 1rem 3rem;
 	}
 }
 .projects {
@@ -220,7 +225,6 @@
 				width: 80%;
 				height: 250px;
 				object-fit: cover;
-
 				border-radius: 0.5rem;
 				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
 			}
@@ -253,11 +257,21 @@
 	}
 }
 
-footer {
-	padding: 1rem;
-	font-size: 1.2rem;
+#footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	text-align: center;
 	background-color: darken($color-primary, $amount: 10) !important;
+	padding: 0.4rem 2rem;
+	border-radius: 0.4rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+	.contact {
+		a {
+			border: none;
+			min-height: 10px;
+		}
+	}
 }
 
 // modal
@@ -270,6 +284,16 @@ footer {
 	z-index: 3;
 	background-color: rgba($color: #000000, $alpha: 0.6);
 	display: none;
+	animation-name: show-modal-animation;
+	animation-duration: 400ms;
+	@keyframes show-modal-animation {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
 
 	.modal-skill {
 		position: relative;
@@ -280,6 +304,9 @@ footer {
 		border-radius: 0.4rem;
 		margin: 150px auto;
 
+		#close-btn-top:hover {
+			opacity: .8;
+		}
 		& > i {
 			position: absolute;
 			right: 1rem;
@@ -290,6 +317,20 @@ footer {
 			height: 200px;
 			text-align: center;
 			padding-top: 4rem;
+			animation-name: modal-top-move-in;
+			animation-duration: 600ms;
+			-moz-animation-timing-function: ease-out;
+
+			@keyframes modal-top-move-in {
+				from {
+					opacity: 0;
+					transform: translateX(-50%);
+				}
+				to {
+					transform: translateX(0);
+					opacity: 100%;
+				}
+			}
 			& > h5 {
 				font-size: 2rem;
 			}
@@ -317,9 +358,5 @@ footer {
 	display: block !important;
 }
 
-// media query
-@media (min-width: 1200px) {
-	.container {
-		width: 1080px;
-	}
-}
+@import 'util';
+@import "_mediaQuery";
