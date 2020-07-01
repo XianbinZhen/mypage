@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @import 'config';
+@import "resume";
 
 #header {
 	.header {
@@ -19,8 +20,13 @@
 			align-items: center;
 			padding-right: 2rem;
 
+			&-active {
+				font-weight: bold;
+				border-bottom: solid 2px $color-primary-light;
+			}
+
 			li {
-				margin: 0 1rem;
+				padding: 0 1rem;
 				list-style-type: none;
 			}
 		}

@@ -33,7 +33,7 @@ a {
 
 a:hover {
 	color: $color-secondary-light;
-	border-bottom: $color-secondary-light solid 2px;
+	// border-bottom: $color-secondary-light solid 2px;
 	cursor: pointer;
 }
 
@@ -41,12 +41,18 @@ button:focus {
 	outline: none;
 }
 
-strong {
+.strong {
 	text-transform: uppercase;
 	color: white;
 	text-shadow: 2px 2px $color-primary-light;
 }
 .strong-reverse {
+	text-transform: uppercase;
+
 	color: $color-primary-dark;
 	text-shadow: 2px 2px $color-secondary-light;
+}
+
+ul {
+	list-style: none;
 }
