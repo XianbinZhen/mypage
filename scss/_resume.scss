@@ -80,3 +80,17 @@
 		}
 	}
 }
+
+.resume-skill {
+	margin: 1rem;
+	&-detail {
+		margin-top: 0.4rem;
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+
+		li {
+			padding: 0.2rem;
+			text-align: center;
+		}
+	}
+}

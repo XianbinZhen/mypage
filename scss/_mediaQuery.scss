@@ -31,4 +31,22 @@
 			}
 		}
 	}
+
+	#personal-info {
+		flex-direction: column;
+		text-align: center;
+		.name {
+			margin: auto;
+			padding: 1rem;
+		}
+		ul {
+			margin: auto;
+		}
+	}
+
+	.resume-skill {
+		&-detail {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
 }

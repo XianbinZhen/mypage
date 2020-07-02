@@ -29,7 +29,7 @@ a {
 }
 
 a:hover {
-  color: #9be7ff;
+  color: #ffe273;
   cursor: pointer;
 }
 
@@ -40,17 +40,21 @@ button:focus {
 .strong {
   text-transform: uppercase;
   color: white;
-  text-shadow: 2px 2px #58a5f0;
+  text-shadow: 2px 2px black;
 }
 
 .strong-reverse {
   text-transform: uppercase;
-  color: #004c8c;
-  text-shadow: 2px 2px #9be7ff;
+  color: #ffcc0d;
+  text-shadow: 2px 2px #37474f;
 }
 
 ul {
   list-style: none;
+}
+
+.text-color-secondary {
+  color: #ffd740;
 }
 
 #personal-info {
@@ -69,7 +73,7 @@ ul {
 
 #personal-info .my-picture img {
   border-radius: 50%;
-  border: 4px solid #58a5f0;
+  border: 4px solid #4c626d;
 }
 
 #personal-info .name {
@@ -156,6 +160,23 @@ ul {
   list-style: outside;
 }
 
+.resume-skill {
+  margin: 1rem;
+}
+
+.resume-skill-detail {
+  margin-top: 0.4rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+}
+
+.resume-skill-detail li {
+  padding: 0.2rem;
+  text-align: center;
+}
+
 #header .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -166,7 +187,7 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #003059;
+  background-color: #0d1113;
 }
 
 #header .header .logo {
@@ -186,7 +207,7 @@ ul {
 
 #header .header .menu-active {
   font-weight: bold;
-  border-bottom: solid 2px #58a5f0;
+  border-bottom: solid 2px #4c626d;
 }
 
 #header .header .menu li {
@@ -214,7 +235,7 @@ ul {
 .intro #left-btn:hover {
   -webkit-transform: translateX(-0.2rem);
           transform: translateX(-0.2rem);
-  color: #9be7ff;
+  color: #ffe273;
   cursor: pointer;
 }
 
@@ -231,7 +252,7 @@ ul {
 .intro #right-btn:hover {
   -webkit-transform: translateX(0.2rem);
           transform: translateX(0.2rem);
-  color: #9be7ff;
+  color: #ffe273;
   cursor: pointer;
 }
 
@@ -323,7 +344,7 @@ ul {
   padding-top: 1.2rem;
   padding-left: 3rem;
   background-color: white;
-  color: #004c8c;
+  color: #222c31;
 }
 
 #skills {
@@ -340,7 +361,7 @@ ul {
   text-align: center;
   gap: 0.2rem;
   background-color: white;
-  color: #004c8c;
+  color: #222c31;
   border-bottom-left-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
 }
@@ -400,7 +421,7 @@ ul {
   margin-top: 1.4rem;
   border-radius: 0.4rem;
   font-size: 2rem;
-  background-color: #0277bd;
+  background-color: #37474f;
   padding: 1rem 3rem;
 }
 
@@ -438,7 +459,7 @@ ul {
   padding: 1rem 0;
   margin: 0.5rem;
   border-radius: 0.5rem;
-  background-color: #0277bd;
+  background-color: #37474f;
 }
 
 .projects-content .projects-img img {
@@ -456,7 +477,7 @@ ul {
 }
 
 .projects-content .projects-img h5 {
-  color: #58a5f0;
+  color: #4c626d;
 }
 
 .projects-content .content-detail {
@@ -474,7 +495,7 @@ ul {
 
 .projects-content .content-detail-up, .projects-content .content-detail-down {
   padding: 1rem;
-  background-color: #0277bd;
+  background-color: #37474f;
   border-radius: 0.5rem;
   margin: 0.5rem;
   height: 100%;
@@ -497,7 +518,7 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background-color: #01578b !important;
+  background-color: #222c31 !important;
   padding: 0.4rem 2rem;
   border-radius: 0.4rem;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
@@ -547,7 +568,7 @@ ul {
   width: 300px;
   height: 500px;
   background-color: white;
-  color: #004c8c;
+  color: #222c31;
   border-radius: 0.4rem;
   margin: 150px auto;
 }
@@ -628,27 +649,34 @@ ul {
 
 .container {
   margin: auto;
-  background: #004c8c;
+  background: #222c31;
   color: white;
   width: 95%;
+}
+
+.container-dark-bg {
+  margin: auto;
+  color: white;
+  width: 95%;
+  background-color: #222c31;
 }
 
 .br {
   width: 100%;
   height: 2px;
-  background-color: #58a5f0;
+  background-color: #4c626d;
 }
 
 .btn-primary {
   padding: 0.3rem 1.6rem;
   border-radius: 0.2rem;
   border: none;
-  background-color: #0277bd;
+  background-color: #37474f;
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #58a5f0;
+  background-color: #4c626d;
 }
 
 @media (min-width: 1200px) {
@@ -682,5 +710,23 @@ ul {
   }
   .projects-content .content-detail {
     display: none;
+  }
+  #personal-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  #personal-info .name {
+    margin: auto;
+    padding: 1rem;
+  }
+  #personal-info ul {
+    margin: auto;
+  }
+  .resume-skill-detail {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
 }

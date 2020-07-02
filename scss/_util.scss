@@ -1,8 +1,15 @@
 .container {
 	margin: auto;
-	background: $color-primary-dark;
-	color: white;
+	background: $color-background;
+	color: $color-text;
 	width: 95%;
+}
+
+.container-dark-bg {
+	margin: auto;
+	color: $color-text;
+	width: 95%;
+	background-color: $color-primary-dark;
 }
 .br {
 	width: 100%;

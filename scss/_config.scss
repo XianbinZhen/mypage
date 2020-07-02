@@ -1,10 +1,12 @@
 // config variables
-$color-primary: #0277bd;
-$color-primary-light: #58a5f0;
-$color-primary-dark: #004c8c;
-$color-secondary: #64b5f6;
-$color-secondary-light: #9be7ff;
-$color-secondary-dark: #2286c3;
+$color-primary: #37474f;
+$color-primary-light: lighten($color-primary, 10);
+$color-primary-dark: darken($color-primary, 10);
+$color-secondary: #ffd740;
+$color-secondary-light: lighten($color-secondary, 10);
+$color-secondary-dark: darken($color-secondary, 10);
+$color-background: $color-primary-dark;
+$color-text: white;
 
 * {
 	margin: 0;
@@ -44,15 +46,18 @@ button:focus {
 .strong {
 	text-transform: uppercase;
 	color: white;
-	text-shadow: 2px 2px $color-primary-light;
+	text-shadow: 2px 2px black;
 }
 .strong-reverse {
 	text-transform: uppercase;
-
-	color: $color-primary-dark;
-	text-shadow: 2px 2px $color-secondary-light;
+	color: $color-secondary-dark;
+	text-shadow: 2px 2px $color-primary;
 }
 
 ul {
 	list-style: none;
+}
+
+.text-color-secondary {
+	color: $color-secondary;
 }
