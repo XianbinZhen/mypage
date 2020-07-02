@@ -9,6 +9,24 @@
 	.container {
 		width: 100%;
 	}
+	.intro {
+		height: 400px;
+
+		#left-btn,
+		#right-btn {
+			top: 80%;
+		}
+		.introduction {
+			h1 {
+				padding-top: 6rem;
+			}
+			p {
+				width: 80%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
 
 	#skill-title {
 		width: 98%;
@@ -47,6 +65,14 @@
 	.resume-skill {
 		&-detail {
 			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+	#footer {
+		flex-direction: column;
+
+		.contact,
+		p {
+			margin-top: 0.4rem;
 		}
 	}
 }
