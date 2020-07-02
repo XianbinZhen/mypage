@@ -9,6 +9,36 @@
 	.container {
 		width: 100%;
 	}
+
+	#header {
+		.header {
+			.menu {
+				// display: none;
+				position: fixed;
+				display: flex;
+				flex-direction: column;
+				top: 0;
+				left: -500px;
+				z-index: 5;
+				background-color: $color-primary-dark;
+				opacity: 90%;
+				width: 60%;
+				height: 100vh;
+				padding-top: 6rem;
+
+				li {
+					margin-bottom: 2rem;
+				}
+			}
+			.menu-bar {
+				display: block;
+			}
+		}
+		.menu-show {
+			transform: translateX(500px);
+		}
+	}
+
 	.intro {
 		height: 400px;
 

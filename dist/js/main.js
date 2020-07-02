@@ -8,6 +8,12 @@ const modalH5 = document.querySelector("#modal-h5");
 const modalBottomContent = document.querySelector("#modal-bottom-p");
 const closeBtnTop = document.querySelector("#close-btn-top");
 const closeBtnBottom = document.querySelector("#close-btn-bottom");
+const modalImgClose = document.querySelector("#modal-img-close");
+const modalImg = document.querySelector("#modal-img");
+const project1Img = document.querySelectorAll(".project-img");
+const modalImgContent = document.querySelector("#modal-img-content");
+const modalImgCaption = document.querySelector("#modal-img-caption");
+
 
 // handle intro bg change
 leftBtn.addEventListener("click", leftBtnClick);
@@ -22,6 +28,10 @@ skillBtn.forEach((btn, index) =>
 skillModal.addEventListener("click", outSideClick);
 closeBtnBottom.addEventListener("click", closeSkillModal);
 closeBtnTop.addEventListener("click", closeSkillModal);
+
+project1Img.forEach((item, index) => item.addEventListener("click", e => showModalImg(e, index)));
+modalImgClose.addEventListener("click", closeModalImg);
+modalImg.addEventListener("click", closeModalImg)
 
 function leftBtnClick(e) {
     let index = indexOfCurrent();
@@ -58,28 +68,40 @@ function skillBtnClick(e, index) {
         case 0:
             modalIcon.classList.add("fa-html5");
             modalH5.innerHTML = "HTML";
+            modalBottomContent.innerHTML = "I learned HTML at BHCC. After I got my BS degree in computer science, I continue to lean HTML by myself. This is one the web site I created with HTML, CSS and JS.";
+
             break;
         case 1:
             modalIcon.classList.add("fa-css3-alt");
             modalH5.innerHTML = "CSS";
+            modalBottomContent.innerHTML = "I learned CSS along site with HTML and getting better day after day as I create more project with HTML, CSS and JS.";
+
             break;
         case 2: modalIcon.classList.add("fa-js");
             modalH5.innerHTML = "JS";
+            modalBottomContent.innerHTML = "I learned Javascript along site with HTML and getting better day after day as I create more project with HTML, CSS and JS.";
+
+
             break;
         case 3: modalIcon.classList.add("fa-sass");
             modalH5.innerHTML = "Sass";
+            modalBottomContent.innerHTML = "Sass is my helping tool to improve my CSS skill and speed.";
+
             break;
         case 4: modalIcon.classList.add("fa-bootstrap");
             modalH5.innerHTML = "Bootstrap";
+            modalBottomContent.innerHTML = "Bootstrap is another tool to enhance my front end skills.";
+
             break;
         case 5: modalIcon.classList.add("fa-react");
             modalH5.innerHTML = "React";
+            modalBottomContent.innerHTML = "I am learning React by myself. The Routable AI visualization tool was built by React and I learnt a lot during the process.";
+
             break;
         default: break;
 
     }
 
-    modalBottomContent.innerHTML = `content ${index}`;
     skillModal.classList.add("show-modal");
 }
 
@@ -91,4 +113,23 @@ function outSideClick(e) {
     if (e.target == skillModal) {
         skillModal.classList = "";
     }
+}
+
+
+function closeModalImg(e) {
+    if (e.target === modalImg || e.target === modalImgClose) {
+        modalImg.classList = "";
+    }
+}
+
+function showModalImg(e, index) {
+    if (index === 0) {
+        modalImgCaption.innerHTML = "RoutableAI Visualization tool";
+        modalImgContent.src = "imgs/routableai.png";
+    } else if (index === 1) {
+        modalImgCaption.innerHTML = "Pharmacy Technology learning tool";
+        modalImgContent.src = "imgs/intro1.jpg";
+    }
+    modalImg.classList.add("show-modal-img");
+
 }
