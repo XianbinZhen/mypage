@@ -128,7 +128,7 @@ function showModalImg(e, index) {
         modalImgContent.src = "imgs/routableai.png";
     } else if (index === 1) {
         modalImgCaption.innerHTML = "Pharmacy Technology learning tool";
-        modalImgContent.src = "imgs/intro1.jpg";
+        modalImgContent.src = "imgs/android.jpg";
     }
     modalImg.classList.add("show-modal-img");
 

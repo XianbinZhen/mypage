@@ -74,6 +74,8 @@ ul {
 #personal-info .my-picture img {
   border-radius: 50%;
   border: 4px solid #4c626d;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 #personal-info .name {
@@ -187,7 +189,7 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #0d1113;
+  background-color: #1e272b;
   height: 50px;
 }
 
@@ -195,6 +197,10 @@ ul {
   width: 40px;
   padding: 5px;
   margin: 0.4rem 2rem;
+}
+
+#header .header .logo:hover {
+  cursor: pointer;
 }
 
 #header .header .menu-bar {
@@ -418,7 +424,12 @@ ul {
 }
 
 .skill #js {
-  color: #cccc00;
+  color: yellow;
+  position: relative;
+  background-image: url("../imgs/black.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px 50px;
 }
 
 .skill #bootstrap {
@@ -538,7 +549,6 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background-color: #222c31 !important;
   padding: 0.4rem 2rem;
   border-radius: 0.4rem;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
