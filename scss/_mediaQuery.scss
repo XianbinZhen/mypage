@@ -1,12 +1,14 @@
 // media query
 @media (min-width: 1200px) {
-	.container {
+	.container,
+	.container-dark-bg {
 		width: 1080px;
 	}
 }
 
 @media (max-width: 768px) {
-	.container {
+	.container,
+	.container-dark-bg {
 		width: 100%;
 	}
 
@@ -104,5 +106,9 @@
 		p {
 			margin-top: 0.4rem;
 		}
+	}
+
+	.about-showcase {
+		grid-template-columns: repeat(3, 1fr);
 	}
 }

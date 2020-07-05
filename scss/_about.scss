@@ -1,0 +1,48 @@
+.about {
+	padding: 1rem;
+	background-color: $color-primary;
+	h1 {
+		padding: 2rem 3rem;
+	}
+	p {
+		width: 80%;
+		margin: 1.4rem auto 1rem auto;
+		text-indent: 1.4rem;
+	}
+}
+
+.show-my-works {
+	margin-left: 2rem;
+	margin-top: 2rem;
+}
+.about-showcase {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 0.4rem;
+	padding: 1rem;
+	&-detail {
+		text-align: center;
+		background-color: $color-primary;
+		border-radius: 0.4rem;
+
+		img {
+			// width: 85%;
+			border-top-left-radius: 0.4rem;
+			border-top-right-radius: 0.4rem;
+
+			// margin-top: 0.6rem;
+			// border: 2px solid $color-primary-light;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+			scale: 1;
+			transition: all 200ms ease-in-out;
+		}
+
+		img:hover {
+			scale: 1.2;
+		}
+
+		p {
+			padding: 0.4rem;
+		}
+	}
+}
