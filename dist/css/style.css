@@ -317,11 +317,10 @@ ul {
 }
 
 #header .header .menu-bar {
-  margin-right: 2rem;
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
   position: absolute;
-  right: 2rem;
+  right: 2.2rem;
   display: none;
 }
 
@@ -336,7 +335,7 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 2rem;
+  padding: 2rem;
   -webkit-transition: all 200ms ease-out;
   transition: all 200ms ease-out;
 }
