@@ -232,6 +232,65 @@ ul {
   padding: 0.4rem;
 }
 
+.my-projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.my-projects-item {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.my-projects-item-img {
+  text-align: center;
+}
+
+.my-projects-item-img img {
+  width: 80%;
+  border-radius: 0.4rem;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.my-projects-item-title {
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  padding: 0.6rem 2rem;
+  border-radius: 0.4rem;
+  background-color: #37474f;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.my-projects-item-detail {
+  padding: 1rem;
+  width: 80%;
+  margin: auto;
+}
+
+.my-projects-item ul {
+  width: 80%;
+  margin: auto;
+}
+
+.my-projects-item ul li {
+  padding: 0.2rem;
+}
+
+.my-projects-item ul li:nth-child(1) {
+  color: #ffd740;
+}
+
 #header .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -836,11 +895,7 @@ ul {
   }
 }
 
-@media (max-width: 768px) {
-  .container,
-  .container-dark-bg {
-    width: 100%;
-  }
+@media (max-width: 1080px) {
   #header .header .menu {
     position: fixed;
     display: -webkit-box;
@@ -851,7 +906,7 @@ ul {
         -ms-flex-direction: column;
             flex-direction: column;
     top: 0;
-    left: -500px;
+    left: -600px;
     z-index: 5;
     background-color: #222c31;
     opacity: 90%;
@@ -866,8 +921,15 @@ ul {
     display: block;
   }
   #header .menu-show {
-    -webkit-transform: translateX(500px);
-            transform: translateX(500px);
+    -webkit-transform: translateX(600px);
+            transform: translateX(600px);
+  }
+}
+
+@media (max-width: 768px) {
+  .container,
+  .container-dark-bg {
+    width: 100%;
   }
   .intro {
     height: 400px;
