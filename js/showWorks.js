@@ -45,16 +45,18 @@ function render(url) {
                 divTemp.classList = 'about-showcase-detail';
                 const img = document.createElement('img');
                 const url = result.url;
+                const p = document.createElement('p');
                 fetch(url)
                     .then(res => res.json())
                     .then(data => {
                         img.src = `https://pokeres.bastionbot.org/images/pokemon/${data.id}.png`;
-                        id = data.id
+                        p.innerHTML = `#${data.id}`;
                     });
-                const p = document.createElement('p');
-                p.innerHTML = `${result.name}`;
+                const p2 = document.createElement('p');
+                p2.innerHTML = `${result.name}`;
                 divTemp.appendChild(img);
                 divTemp.appendChild(p);
+                divTemp.appendChild(p2);
                 aboutShowcase.appendChild(divTemp);
             }
         ));
